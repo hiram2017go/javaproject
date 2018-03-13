@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/HRSystem/HRSystem.iml" filepath="$PROJECT_DIR$/HRSystem/HRSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QuartzQs/QuartzQs.iml" filepath="$PROJECT_DIR$/QuartzQs/QuartzQs.iml" />
     </modules>
   </component>
 </project>
