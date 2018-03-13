@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+       http://www.springframework.org/schema/aop
+       http://www/springframework.org/schema/aop/spring-aop-4.0.xsd">
+
+
+    <bean id="managerTemplate" abstract="true" lazy-init="true">
+        <property name="appDao" ref="appDao"/>
+        <property name="attendDao" ref="attendDao"/>
+        <property name="attendTypeDao" ref="attendTypeDao"/>
+        <property name="checkBackDao" ref="checkDao"/>
+        <property name="employeeDao" ref="employeeDao"/>
+        <property name="mgrDao" ref="managerDao"/>
+        <property name="paymentDao" ref="payDao"/>
+    </bean>
+
+    <!-- 定义两个业务逻辑组件，继承业务逻辑组件的模板 -->
+    <bean id="empManager"
+          class="org.crazyit.hrsystem.service.impl.EmpManagerImpl"
+          parent="managerTemplate"/>
+    <bean id="mgrManager"
+          class="org.crazyit.hrsystem.service.impl.MgrManagerImpl"
+          parent="managerTemplate"/>
+</beans>
