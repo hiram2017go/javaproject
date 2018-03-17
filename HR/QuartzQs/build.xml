@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="GBK"?>
+<!--project 是项目工程的顶级节点，一个build,xml可以包含多个project节点元素-->
+<project name="quartz" basedir="." default=""> <!--defalult:默认执行的target元素节点名称-->
+	<property name="src" value="src"/>
+	<property name="dest" value="classes"/>
+
+	<path id="classpath">
+		<fileset dir="lib">
+			<include name="*.jar"/>
+		</fileset>
+		<pathelement path="${dest}"/>
+	</path>
+
+	<target name="compile" description="Compile all source code">
+		<delete dir="${dest}"/>
+		<mkdir dir="${dest}"/>
+		<copy todir="${dest}">
+			<fileset dir="${src}">
+				<exclude name="**/*.java"/> <!--用于描述fileset不包含哪些文件,与Include含义相反-->
+			</fileset>		
+		</copy>
+		<!--Javac用于编译Java源文件。-->
+		<!--Javac主要属性：-->
+		<!--Srcdir：标明源文件位置-->
+		<!--Destdir：编译后文件存放位置-->
+		<!--Encoding：指定编码格式-->
+		<!--Classpath：指定lib位置-->
+		<!--Debug：是否输出调试信息-->
+		<javac destdir="${dest}" debug="true"
+			deprecation="false" optimize="false" failonerror="true">
+			<src path="${src}"/>
+			<classpath refid="classpath"/>
+			<compilerarg value="-Xlint:deprecation"/>
+		</javac>
+	</target>
+
+	<target name="run" description="Run the main class" depends="compile">
+		<java classname="lee.MyQuartzServer" fork="yes" failonerror="true">
+			<classpath refid="classpath"/>
+		</java>
+	</target>
+
+</project>
