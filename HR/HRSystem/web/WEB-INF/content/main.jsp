@@ -17,7 +17,7 @@
 <table width="960" align="center"
        background="${pageContext.request.contextPath}/images/bodybg.jpg">
     <tr>
-        <td colspan="3">请单击后面链接开始使用系统<a href="login.action">登录系统</a></td>
+        <td colspan="3">请单击后面链接开始使用系统<a href="login.jsp">登录系统</a></td>
     </tr>
     <tr>
         <td colspan="3">
@@ -28,7 +28,7 @@
             <p align="center" class="pt11">应用模拟了简单的工作流，使用的轻量级Java EE架构。技术包括：Struts 2.3、Spring 4.0、Hibernate 4.3、Quartz 2.2，整个应用使用Spring提供的DAO支持操作数据库，同时利用Spring的声明式事务。<br>
                 程序中的权限检查使用Spring的AOP框架支持，也利用了Spring的任务调度抽象<br>
                 Hibernate为底层的数据库访问提供支持,作为O/R Mapping框架使用。</p>
-            <p align="center" class="pt11">本程序的源代码随程序一起发布，版权属于李刚，<a href="http://www.crazyit.org">http://www.crazyit.org</a><br>
+            <p align="center" class="pt11">本程序的源代码随程序一起发布，版权属于Hiram，<a href="http://www.crazyit.org">http://www.crazyit.org</a><br>
                 任何个人可用来参考学习Java EE架构，规范，但请勿在本程序的基础上修改，用做任何商业用途。<br>
                 本人保留依法追究相关责任的权利。转载和学习请保留此信息。
                 <br>
