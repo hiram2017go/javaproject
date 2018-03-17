@@ -5,4 +5,26 @@
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
+
+    <constant name="struts.custom.i18n.resources" value="resource"/>
+    <constant name="struts.i18n.encoding" value="GBK"/>
+    <constant name="struts.devMode" value="true"/>
+    <package name="default" extends="struts-default">
+
+
+        <!--定义全局异常映射-->
+        <!--<global-exception-mappings>-->
+            <!--<exception-mapping exception="org.crazyit.hrsystem.exception.HrException" result="business"></exception-mapping>-->
+        <!--</global-exception-mappings>-->
+
+
+        <!--============================下面是员工角色的Action================================-->
+
+        <action name="processLogin" class="org.crazyit.hrsystem.action.LoginAction">
+            <result name="error"></result>
+
+        </action>
+
+    </package>
+
 </struts>
