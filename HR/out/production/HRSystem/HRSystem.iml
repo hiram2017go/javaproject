@@ -7,7 +7,7 @@
           <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/web/WEB-INF/web.xml" />
         </descriptors>
         <webroots>
-          <root url="file://$MODULE_DIR$/web/WEB-INF/content" relative="/" />
+          <root url="file://$MODULE_DIR$/web" relative="/" />
         </webroots>
         <sourceRoots>
           <root url="file://$MODULE_DIR$/src" />
@@ -17,7 +17,7 @@
         <configuration>
           <fileset id="s2fileset" name="Default File Set " removed="false">
             <file>file://$MODULE_DIR$/src/struts.xml</file>
-            <file>jar://$MODULE_DIR$/lib/struts2-core.jar!/struts-default.xml</file>
+            <file>jar://$MODULE_DIR$/lib/struts2-core-2.3.16.3.jar!/struts-default.xml</file>
           </fileset>
           <propertiesKeys disabled="false" />
         </configuration>
@@ -53,7 +53,7 @@
     <orderEntry type="library" exported="" name="Spring-4.3.14.RELEASE" level="project" />
     <orderEntry type="library" exported="" name="Struts 2-2.5.14.1" level="project" />
     <orderEntry type="library" exported="" name="Spring MVC-4.3.14.RELEASE" level="project" />
-    <orderEntry type="library" exported="" name="Hibernate 5.2.14-5.2.14" level="project" />
+    <orderEntry type="library" exported="" name="Hibernate 4.2.2-4.2.2" level="project" />
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>

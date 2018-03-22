@@ -58,7 +58,7 @@ public class BaseDaoHibernate4<T> implements BaseDao<T>
     {
         getSessionFactory().getCurrentSession()
                 .createQuery("delete " + entityClazz.getSimpleName()
-                        + " en where en.id = ?0")
+                        + " en where en.id = ?")
                 .setParameter("0" , id)
                 .executeUpdate();
     }

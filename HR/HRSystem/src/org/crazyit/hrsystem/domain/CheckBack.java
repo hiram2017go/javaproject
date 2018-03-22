@@ -3,10 +3,16 @@ package org.crazyit.hrsystem.domain;
 /*
 * 对应批复，包含该批复对应的申请、是否通过申请、由哪个经理完成批复等属性。
 * */
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
 
 import javax.persistence.*;
 import java.io.Serializable;
 
+@Entity
+@Table(name="checkback_inf")
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class CheckBack implements Serializable{
 
     private  static final long serialVersionUID = 48L;

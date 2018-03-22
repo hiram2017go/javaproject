@@ -2,24 +2,21 @@
   <library name="Spring-4.3.14.RELEASE" type="spring">
     <properties version="4.3.14.RELEASE" />
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-aspects-4.3.14.RELEASE.jar!/" />
-      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-context-support-4.3.14.RELEASE.jar!/" />
-      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-aop-4.3.14.RELEASE.jar!/" />
-      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-expression-4.3.14.RELEASE.jar!/" />
-      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-instrument-4.3.14.RELEASE.jar!/" />
-      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-instrument-tomcat-4.3.14.RELEASE.jar!/" />
-      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-jdbc-4.3.14.RELEASE.jar!/" />
-      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-beans-4.3.14.RELEASE.jar!/" />
-      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-jms-4.3.14.RELEASE.jar!/" />
-      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-core-4.3.14.RELEASE.jar!/" />
-      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-oxm-4.3.14.RELEASE.jar!/" />
-      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-messaging-4.3.14.RELEASE.jar!/" />
-      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-context-4.3.14.RELEASE.jar!/" />
-      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-tx-4.3.14.RELEASE.jar!/" />
-      <root url="jar://$PROJECT_DIR$/HRSystem/lib/aopalliance-1.0.jar!/" />
-      <root url="jar://$PROJECT_DIR$/HRSystem/lib/commons-logging-1.2.jar!/" />
-      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-orm-4.3.14.RELEASE.jar!/" />
-      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-test-4.3.14.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-beans-4.0.4.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-orm-4.0.4.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-oxm-4.0.4.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-context-4.0.4.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-context-support-4.0.4.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-instrument-tomcat-4.0.4.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-instrument-4.0.4.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-expression-4.0.4.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-aop-4.0.4.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-messaging-4.0.4.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-jdbc-4.0.4.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-jms-4.0.4.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-aspects-4.0.4.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-core-4.0.4.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-test-4.0.4.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

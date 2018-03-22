@@ -18,11 +18,11 @@ public class TestJob implements Job {
             System.out.println(new Date() + " 作业被调度.");
 
             //循环100次模拟任务的执行
-            for(int i = 0; i < 100; i++){
+            for(int i = 0; i < 20; i++){
                 System.out.println("作业完成"+(i + 1) + '%');
 
                 try {
-                    Thread.sleep(100);
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

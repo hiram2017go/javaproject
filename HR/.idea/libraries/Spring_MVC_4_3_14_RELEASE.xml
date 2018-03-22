@@ -2,10 +2,11 @@
   <library name="Spring MVC-4.3.14.RELEASE" type="spring-mvc">
     <properties version="4.3.14.RELEASE" />
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-webmvc-portlet-4.3.14.RELEASE.jar!/" />
-      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-websocket-4.3.14.RELEASE.jar!/" />
-      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-web-4.3.14.RELEASE.jar!/" />
-      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-webmvc-4.3.14.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-tx-4.0.4.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-web-4.0.4.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-webmvc-4.0.4.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-webmvc-portlet-4.0.4.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-websocket-4.0.4.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

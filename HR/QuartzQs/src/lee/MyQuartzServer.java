@@ -25,7 +25,7 @@ public class MyQuartzServer {
         Trigger trigger = TriggerBuilder.newTrigger()
                 .withIdentity(TriggerKey.triggerKey("fkTrigger", "fkTriggerGroup"))
                 .withSchedule(SimpleScheduleBuilder.simpleSchedule()
-                        .withIntervalInSeconds(60)
+                        .withIntervalInSeconds(10)
                         .repeatForever())
                 .startNow()
                 .build();
@@ -33,7 +33,7 @@ public class MyQuartzServer {
         Trigger trigger2 = TriggerBuilder.newTrigger()
                 .withIdentity(TriggerKey.triggerKey("fkTrigger2", "fkTriggerGroup2"))
                 .withSchedule(SimpleScheduleBuilder.simpleSchedule()
-                        .withIntervalInSeconds(60)
+                        .withIntervalInSeconds(10)
                         .repeatForever())
                 .startNow()
                 .build();
