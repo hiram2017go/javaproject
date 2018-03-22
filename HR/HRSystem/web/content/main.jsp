@@ -17,7 +17,7 @@
 <table width="960" align="center"
        background="${pageContext.request.contextPath}/content/images/bodybg.jpg">
     <tr>
-        <td colspan="3">请单击后面链接开始使用系统<a href="login.jsp">登录系统</a></td>
+        <td colspan="3">请单击后面链接开始使用系统<a href="./content/login.jsp">登录系统</a></td>
     </tr>
     <tr>
         <td colspan="3">

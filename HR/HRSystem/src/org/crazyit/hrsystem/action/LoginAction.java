@@ -35,6 +35,7 @@ public class LoginAction extends EmpBaseAction {
     @Override
     public String execute() throws Exception {
 
+        System.out.println("---------------------------------");
         ActionContext ctx = ActionContext.getContext();
         //获取HTTPSession中的rand属性
         String ver2 = (String)ctx.getSession().get("rand");
