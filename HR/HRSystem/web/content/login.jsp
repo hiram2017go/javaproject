@@ -20,11 +20,11 @@
     <tr>
         <td>
             请输入用户名和密码来登录<br/>
-            <s:if test="actionMessages.size()>0">
-            <div class="error">
-                <s:actionmessage/>
-            </div>
-            </s:if>
+            <%--<s:if test="actionMessages.size()>0">--%>
+            <%--<div class="error">--%>
+                <%--<s:actionmessage/>--%>
+            <%--</div>--%>
+            <%--</s:if>--%>
             <s:actionerror cssClass="error"/>
             <div align="center">
                 <s:form action="processLogin">

@@ -17,6 +17,7 @@
       <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-aspects-4.0.4.RELEASE.jar!/" />
       <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-core-4.0.4.RELEASE.jar!/" />
       <root url="jar://$PROJECT_DIR$/HRSystem/lib/spring-test-4.0.4.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/HRSystem/lib/aopalliance.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

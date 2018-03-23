@@ -15,7 +15,7 @@
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>WEB-INF/daoContext.xml</param-value>
+        <param-value>WEB-INF/daoContext.xml,/WEB-INF/applicationContext.xml</param-value>
     </context-param>
 
     <!--使用ContextLoaderListener初始化spring容器-->

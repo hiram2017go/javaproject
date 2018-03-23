@@ -19,7 +19,7 @@ public class MgrManagerImpl implements MgrManager {
     private ApplicationDao appDao;
     private AttendDao attendDao;
     private AttendTypeDao attendTypeDao;
-    private EmployeeDao empDao;
+    private EmployeeDao employeeDao;
     private ManagerDao mgrDao;
     private CheckBackDao checkBackDao;
     private PaymentDao paymentDao;
@@ -48,12 +48,12 @@ public class MgrManagerImpl implements MgrManager {
         this.attendTypeDao = attendTypeDao;
     }
 
-    public EmployeeDao getEmpDao() {
-        return empDao;
+    public EmployeeDao getEmployeeDao() {
+        return employeeDao;
     }
 
-    public void setEmpDao(EmployeeDao empDao) {
-        this.empDao = empDao;
+    public void setEmployeeDao(EmployeeDao employeeDao) {
+        this.employeeDao = employeeDao;
     }
 
     public ManagerDao getMgrDao() {
@@ -95,7 +95,7 @@ public class MgrManagerImpl implements MgrManager {
         }
 
         emp.setManager(manager);
-        empDao.save(emp);
+        employeeDao.save(emp);
     }
 
     /**
