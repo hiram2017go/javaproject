@@ -9,25 +9,39 @@
     <constant name="struts.custom.i18n.resources" value="resource"/>
     <constant name="struts.i18n.encoding" value="GBK"/>
     <constant name="struts.devMode" value="true"/>
-    <package name="default" extends="struts-default">
+    <package name="default" namespace="/" extends="struts-default">
 
+
+        <!-- 定义全局Result映射 -->
+        <global-results>
+            <!-- 定义sql、root两个异常对应的视图页 -->
+            <result name="business">/WEB-INF/content/error.jsp</result>
+            <result name="root">/WEB-INF/content/error.jsp</result>
+            <!-- 定义login逻辑视图对应的视图资源 -->
+            <result name="login">/WEB-INF/content/login.jsp</result>
+        </global-results>
 
         <!--定义全局异常映射-->
-        <!--<global-exception-mappings>-->
-            <!--<exception-mapping exception="org.crazyit.hrsystem.exception.HrException" result="business"></exception-mapping>-->
-        <!--</global-exception-mappings>-->
+        <global-exception-mappings>
+            <exception-mapping exception="org.crazyit.hrsystem.exception.HrException" result="business"/>
+        </global-exception-mappings>
 
 
         <!--============================下面是员工角色的Action================================-->
 
         <action name="processLogin" class="org.crazyit.hrsystem.action.LoginAction">
-            <result name="error">/content/error.jsp</result>
-            <result name="input">/content/login.jsp</result>
-            <!--<result name="mgr">/WEB-INF/content</result>-->
-            <!--<result name="emp"></result>-->
+            <result name="error">/WEB-INF/content/error.jsp</result>
+            <result name="input">/WEB-INF/content/login.jsp</result>
+            <result name="mgr">/WEB-INF/content/manager/index.jsp</result>
+            <result name="emp">/WEB-INF/content/employee/index.jsp</result>
 
         </action>
 
+
+        <!--上面的action都没匹配到，会匹配这个action-->
+        <action name="*">
+            <result>/WEB-INF/content/{1}.jsp</result>
+        </action>
     </package>
 
 </struts>

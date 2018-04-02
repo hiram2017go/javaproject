@@ -8,7 +8,7 @@ public class EmpBaseAction extends ActionSupport {
     //依赖的业务逻辑组件
     protected EmpManager mgr;
 
-    public void setMgr(EmpManager mgr) {
+    public void setEmpManager(EmpManager mgr) {
         this.mgr = mgr;
     }
 }

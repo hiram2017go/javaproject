@@ -59,6 +59,7 @@ public class EmpManagerImpl implements EmpManager {
      */
     @Override
     public int valiadLogin(Manager mgr) {
+        System.out.println("进入到经理登录验证页面");
         //如果找到一个经理，以经理身份登录
         if(mgrDao.findByNameAndPass(mgr).size() > 0) return  LOGIN_MGR;
 
