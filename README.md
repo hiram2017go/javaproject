@@ -36,4 +36,33 @@ List<Attend> attendList = attendDao.findByEmpAndDutyDay(emp, dutyDay);
 如果有2条，并且第2条的punchtime是null，则可以下班打卡。
 
 
-# applicationContext.xml 中transmanager事务管理是需要的，及切面相关的东西，因为相关属性注入需要SessionFactory关联。
+### applicationContext.xml 中transmanager事务管理是需要的，及切面相关的东西，因为相关属性注入需要SessionFactory关联。
+
+
+----------------
+## 代码结构
+```flow
+-src 源代码目录
+    - org 根目录
+    - common 公共组织代码
+      - dao 数据查询hibernate基本方法库
+    - hrSystem 系统相关业务代码
+      - action struts2相关请求action业务代码
+      - Dao 具体的数据库查询方法
+      - domain 数据库表对应数据类---仅提供给service内部调用（类似Entity）
+      - schedule Quartz调度类-具体方法在applicationContext.xml中配置
+      - service spring具体操作类，提供给action调用
+      - vo 对外返回的数据类
+- web 相关web请求及web.xml和spring配置文件存在目录
+```
+## 调用顺序
+```java
+jsp --> action --> service --> dao --> domain---↓
+           ↑------重新将值返回--vo<---------------
+```
+
+authority中包含拦截器，在Struts.xml中定义为拦截栈，需要的action中加入进去
+识别器：validation用法为Action名称-validation.xml进行定义就可以进行识别
+
+**** 容易迷惑的东西 ****
+EmpManager和MgrManger为spring中的bean容器，action在调用spring中的bean时，spring会自动将其注入进去。
