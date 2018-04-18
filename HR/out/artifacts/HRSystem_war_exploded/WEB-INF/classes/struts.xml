@@ -111,6 +111,21 @@
             <result>/WEB-INF/content/employee/index.jsp</result>
         </action>
 
+        <!--经理查看申请-->
+        <action name="viewApp"
+                class="org.crazyit.hrsystem.action.ViewAppAction">
+            <interceptor-ref name="basicStack"/>
+            <interceptor-ref name="mgrAuth"/>
+            <result>/WEB-INF/content/manager/viewApps.jsp</result>
+        </action>
+
+        <!--经理操作处理申请-->
+        <action name="check"
+                class="org.crazyit.hrsystem.action.CheckAppAction">
+            <interceptor-ref name="mgrStack"/>
+            <result type="chain">viewApp</result>  <!--将请求转发到一个action-->
+        </action>
+
         <!--上面的action都没匹配到，会匹配这个action-->
         <action name="*">
             <result>/WEB-INF/content/{1}.jsp</result>
