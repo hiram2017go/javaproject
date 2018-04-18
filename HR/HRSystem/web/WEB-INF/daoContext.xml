@@ -18,7 +18,6 @@
           p:initialPoolSize="2"
           p:maxIdleTime="20"/>
 
-
     <!--在此数据源基础上配置SessionFactory对象         -->
 
     <!--定义Hibernate的SessionFactory，并依赖注入数据源，注入上面定义的dataSource-->

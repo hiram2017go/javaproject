@@ -5,6 +5,8 @@ import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.springframework.scheduling.quartz.QuartzJobBean;
 
+import java.util.Date;
+
 public class PunchJob extends QuartzJobBean {
 
     //判断作业是否正在执行
@@ -22,7 +24,7 @@ public class PunchJob extends QuartzJobBean {
     protected void executeInternal(JobExecutionContext jobExecutionContext) throws JobExecutionException {
 
         if(!isRunning){
-            System.out.println("开始调度自动打卡");
+            System.out.println("开始调度自动打卡.................."+ (new Date()));
             isRunning = true;
             //调用业务逻辑方法
             empMgr.autoPunch();

@@ -20,7 +20,7 @@ public class PayJob extends QuartzJobBean {
     protected void executeInternal(JobExecutionContext jobExecutionContext) throws JobExecutionException {
 
         if(!isRunning){
-            System.out.println("开始调度自动结算工资");
+            System.out.println("开始调度自动结算工资~~~~~~~~~~~~~~~~");
             isRunning = true;
             empMrg.autoPay();
             isRunning = false;

@@ -20,6 +20,7 @@ public class LoginAction extends EmpBaseAction {
     public Manager getManager() {
         return manager;
     }
+
     public void setManager(Manager manager) {
         this.manager = manager;
     }

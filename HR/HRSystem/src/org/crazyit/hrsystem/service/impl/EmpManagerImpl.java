@@ -74,14 +74,17 @@ public class EmpManagerImpl implements EmpManager {
      */
     @Override
     public void autoPunch() {
-        System.out.println("自动插入旷工记录");
+        System.out.println("自动插入旷工记录"+(new Date()));
 
         List<Employee> empList = employeeDao.findAll(Employee.class);
-        String dutyDay = new Date(System.currentTimeMillis()).toString();
+        String dutyDay = new java.sql.Date(System.currentTimeMillis()).toString();
+
+        System.out.println("自动打卡dutyDay====="+dutyDay);
 
         for (Employee e : empList){
             AttendType attendType = attendTypeDao.get(AttendType.class, 6);
             Attend attend = new Attend();
+            attend.setType(attendType);
             attend.setDutyDay(dutyDay);
             attend.setEmployee(e);
             //如果当前时间是早上，对应于上班打卡
@@ -175,8 +178,9 @@ public class EmpManagerImpl implements EmpManager {
         Attend attend = attendDao.findByEmpAndDutyDayAndCome(emp, dutyDay, isCome);
         if(attend == null) return PUNCH_FAIL;
 
+        System.out.println("看一下是否有punchTime："+ attend.getPunchTime());
         //已经打卡
-        if(attend.getPunchTime() == null) return  PUNCHED; //系统每天定时7点和13点为每个员工各插入一条旷工记录，但是punchtime为空。员工打卡时是修改那个时间
+        if(attend.getPunchTime() != null) return  PUNCHED; //系统每天定时7点和13点为每个员工各插入一条旷工记录，但是punchtime为空。员工打卡时是修改那个时间
 
         System.out.print("嘀·已打卡~~~~~~~~~~~~~~~");
 
